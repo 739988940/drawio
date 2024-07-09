@@ -1,9 +1,540 @@
-<mxfile host="app.diagrams.net" modified="2024-07-09T00:27:23.903Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" version="24.6.4" etag="88Fw8rYh_mxOccp_CvrQ" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-09T00:28:32.353Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="Sl2A95rS_ojOGVl6w7Mr" version="24.6.4" type="github">
   <diagram name="第 1 页" id="VPcM-XZPTd7dPfUlE-G8">
-    <mxGraphModel>
+    <mxGraphModel dx="2243" dy="2058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="MZGC72tf3JFac9dOt_uT-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DocumentFieldVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ DocumentFieldVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- field: String&lt;br/&gt;- id: Long&lt;br/&gt;- counter: Integer&lt;br/&gt;- type: String&lt;br/&gt;- wordType: String&lt;br/&gt;- wordId: Long&lt;br/&gt;- word: String&lt;br/&gt;- offsetList: List&amp;lt;DocumentOffsetVo&amp;gt;&lt;br/&gt;- documentId: Long&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ addOffset(DocumentOffsetVo): void&lt;br/&gt;+ addCounter(int): void&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; counter: int&lt;br/&gt; documentId: Long&lt;br/&gt; wordType: String&lt;br/&gt; type: String&lt;br/&gt; id: Long&lt;br/&gt; field: String&lt;br/&gt; offsetList: List&amp;lt;DocumentOffsetVo&amp;gt;&lt;br/&gt; word: String&lt;br/&gt; wordId: Long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2036" y="1755" width="273" height="546" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DocumentHandlerVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ DocumentHandlerVo(String, String, String): &lt;br/&gt;+ DocumentHandlerVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- moduleName: String&lt;br/&gt;- type: String&lt;br/&gt;- documentCount: int&lt;br/&gt;- rebuildAudit: RebuildAuditVo&lt;br/&gt;- name: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; documentCount: int&lt;br/&gt; name: String&lt;br/&gt; moduleName: String&lt;br/&gt; type: String&lt;br/&gt; rebuildAudit: RebuildAuditVo&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-308" y="204" width="320" height="329" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DocumentOffsetVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ DocumentOffsetVo(int, int): &lt;br/&gt;+ DocumentOffsetVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- start: int&lt;br/&gt;- fieldId: Long&lt;br/&gt;- type: String&lt;br/&gt;- end: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; start: int&lt;br/&gt; type: String&lt;br/&gt; end: int&lt;br/&gt; fieldId: Long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2061" y="588" width="223" height="281" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DocumentTypeVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ DocumentTypeVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- type: String&lt;br/&gt;- documentList: List&amp;lt;DocumentVo&amp;gt;&lt;br/&gt;- typeName: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; documentList: List&amp;lt;DocumentVo&amp;gt;&lt;br/&gt; type: String&lt;br/&gt; typeName: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1923" y="3924" width="258" height="209" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DocumentVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ DocumentVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- moduleId: String&lt;br/&gt;- targetId: Long&lt;br/&gt;- type: String&lt;br/&gt;- clickCount: int&lt;br/&gt;- content: String&lt;br/&gt;- typeText: String&lt;br/&gt;- hitCount: int&lt;br/&gt;- targetUrl: String&lt;br/&gt;- title: String&lt;br/&gt;- wordList: Set&amp;lt;String&amp;gt;&lt;br/&gt;- fullTextIndexWordList: List&amp;lt;FullTextIndexWordVo&amp;gt;&lt;br/&gt;- highlightContent: String&lt;br/&gt;- canRead: Boolean&lt;br/&gt;- typeList: List&amp;lt;String&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; hitCount: int&lt;br/&gt; type: String&lt;br/&gt; clickCount: int&lt;br/&gt; wordList: Set&amp;lt;String&amp;gt;&lt;br/&gt; typeText: String&lt;br/&gt; targetUrl: String&lt;br/&gt; canRead: Boolean&lt;br/&gt; typeList: List&amp;lt;String&amp;gt;&lt;br/&gt; content: String&lt;br/&gt; fullTextIndexWordList: List&amp;lt;FullTextIndexWordVo&amp;gt;&lt;br/&gt; title: String&lt;br/&gt; targetId: Long&lt;br/&gt; highlightContent: String&lt;br/&gt; moduleId: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2092" y="2460" width="361" height="737" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FieldVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FieldVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- content: String&lt;br/&gt;- field: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; field: String&lt;br/&gt; content: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1024" y="3948" width="137" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexContentVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexContentVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- content: String&lt;br/&gt;- targetType: String&lt;br/&gt;- targetField: String&lt;br/&gt;- targetId: Long&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; targetField: String&lt;br/&gt; content: String&lt;br/&gt; targetId: Long&lt;br/&gt; targetType: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="233" y="1900" width="239" height="257" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexFieldWordVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexFieldWordVo(Long, String, String, String): &lt;br/&gt;+ FullTextIndexFieldWordVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- wordId: Long&lt;br/&gt;- targetField: String&lt;br/&gt;- targetType: String&lt;br/&gt;- offsetList: Set&amp;lt;FullTextIndexOffsetVo&amp;gt;&lt;br/&gt;- targetId: Long&lt;br/&gt;- counter: int&lt;br/&gt;- id: Long&lt;br/&gt;- word: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ addCount(): FullTextIndexFieldWordVo&lt;br/&gt;+ addOffset(FullTextIndexOffsetVo): FullTextIndexFieldWordVo&lt;br/&gt;+ hashCode(): int&lt;br/&gt;+ equals(Object): boolean&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; offsetList: Set&amp;lt;FullTextIndexOffsetVo&amp;gt;&lt;br/&gt; counter: int&lt;br/&gt; id: Long&lt;br/&gt; targetId: Long&lt;br/&gt; targetType: String&lt;br/&gt; targetField: String&lt;br/&gt; word: String&lt;br/&gt; wordId: Long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1743" width="425" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexHandlerBase&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexHandlerBase(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ createIndex(Long): void&lt;br/&gt;# myCreateIndex(FullTextIndexVo): void&lt;br/&gt;+ deleteIndex(Long): void&lt;br/&gt;# myMakeupDocument(DocumentVo): void&lt;br/&gt;- replaceKeyword(Element, List&amp;lt;FullTextIndexWordVo&amp;gt;): void&lt;br/&gt;+ rebuildIndex(String, Boolean): void&lt;br/&gt;# myRebuildIndex(FullTextIndexTypeVo): void&lt;br/&gt;# createIndex(Long, boolean): void&lt;br/&gt;+ makeupDocument(DocumentVo): void&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; moduleId: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1121" y="4176" width="422" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexHandlerFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexHandlerFactory(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getHandler(String): IFullTextIndexHandler&lt;br/&gt;+ onInitialized(NeatLogicWebApplicationContext): void&lt;br/&gt;+ getTypeByName(String): FullTextIndexTypeVo&lt;br/&gt;# myInit(): void&lt;br/&gt;+ getHandler(IFullTextIndexType): IFullTextIndexHandler&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; allTypeList: List&amp;lt;FullTextIndexTypeVo&amp;gt;&lt;br/&gt; moduleIdList: List&amp;lt;String&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-139" y="3912" width="382" height="233" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexInitializer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexInitializer(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;# myInit(): void&lt;br/&gt;+ onInitialized(NeatLogicWebApplicationContext): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="1452" width="374" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;FullTextIndexMapper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getContentByTargetIdList(List&amp;lt;Long&amp;gt;, String): List&amp;lt;FullTextIndexContentVo&amp;gt;&lt;br/&gt;+ insertTarget(FullTextIndexTargetVo): void&lt;br/&gt;+ getFullTextIndexCountByType(FullTextIndexTypeVo): int&lt;br/&gt;+ insertContent(FullTextIndexContentVo, String): void&lt;br/&gt;+ getContentByTargetId(Long, String): FullTextIndexContentVo&lt;br/&gt;+ insertFieldOffset(FullTextIndexOffsetVo, String): void&lt;br/&gt;+ deleteFullTextIndexByTargetIdAndType(FullTextIndexVo, String): void&lt;br/&gt;+ updateTargetError(FullTextIndexTargetVo): void&lt;br/&gt;+ deleteFullTextIndexByType(FullTextIndexTypeVo): void&lt;br/&gt;+ getFullTextIndexListByKeywordListAndTargetList(List&amp;lt;String&amp;gt;, List&amp;lt;Long&amp;gt;, String): List&amp;lt;FullTextIndexVo&amp;gt;&lt;br/&gt;+ replaceIntoField(FullTextIndexFieldWordVo, String): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1204" y="2677" width="537" height="303" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexModuleContainer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexModuleContainer(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ set(String): void&lt;br/&gt;+ remove(): void&lt;br/&gt;+ get(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-312" y="4260" width="289" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexOffsetVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexOffsetVo(): &lt;br/&gt;+ FullTextIndexOffsetVo(int, int): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- fieldId: Long&lt;br/&gt;- end: int&lt;br/&gt;- start: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ equals(Object): boolean&lt;br/&gt;+ hashCode(): int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; start: int&lt;br/&gt; end: int&lt;br/&gt; fieldId: Long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="691" y="907" width="242" height="282" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;FullTextIndexRebuildAuditMapper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ searchFullTextIndexRebuildAudit(FullTextIndexRebuildAuditVo): List&amp;lt;FullTextIndexRebuildAuditVo&amp;gt;&lt;br/&gt;+ insertFullTextIndexRebuildAudit(FullTextIndexRebuildAuditVo): void&lt;br/&gt;+ updateFullTextIndexRebuildAuditStatus(FullTextIndexRebuildAuditVo): void&lt;br/&gt;+ resetFullTextIndexRebuildAuditStatus(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1503" y="3461" width="658" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexRebuildAuditVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexRebuildAuditVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- status: String&lt;br/&gt;- editor: String&lt;br/&gt;- indexCount: Integer&lt;br/&gt;- typeList: List&amp;lt;String&amp;gt;&lt;br/&gt;- type: String&lt;br/&gt;- endTime: Date&lt;br/&gt;- error: String&lt;br/&gt;- typeName: String&lt;br/&gt;- statusText: String&lt;br/&gt;- startTime: Date&lt;br/&gt;- serverId: Integer&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type: String&lt;br/&gt; startTime: Date&lt;br/&gt; editor: String&lt;br/&gt; error: String&lt;br/&gt; statusText: String&lt;br/&gt; serverId: Integer&lt;br/&gt; status: String&lt;br/&gt; typeName: String&lt;br/&gt; endTime: Date&lt;br/&gt; typeList: List&amp;lt;String&amp;gt;&lt;br/&gt; indexCount: Integer&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="654" y="3232" width="276" height="593" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;FullTextIndexSchemaMapper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ createFullTextIndexTargetTable(String): void&lt;br/&gt;+ createFullTextIndexContentTable(String): void&lt;br/&gt;+ createFullTextIndexFieldTable(String): void&lt;br/&gt;+ createFullTextIndexOffsetTable(String): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-34" y="981" width="332" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexTargetVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexTargetVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- wordList: Set&amp;lt;FullTextIndexWordVo&amp;gt;&lt;br/&gt;- error: String&lt;br/&gt;- moduleId: String&lt;br/&gt;- targetType: String&lt;br/&gt;- targetId: Long&lt;br/&gt;- hitCount: int&lt;br/&gt;- fieldList: Set&amp;lt;FullTextIndexFieldWordVo&amp;gt;&lt;br/&gt;- clickCount: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ adField(FullTextIndexFieldWordVo): void&lt;br/&gt;+ addWord(FullTextIndexWordVo): void&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; hitCount: int&lt;br/&gt; clickCount: int&lt;br/&gt; wordList: Set&amp;lt;FullTextIndexWordVo&amp;gt;&lt;br/&gt; error: String&lt;br/&gt; targetId: Long&lt;br/&gt; targetType: String&lt;br/&gt; fieldList: Set&amp;lt;FullTextIndexFieldWordVo&amp;gt;&lt;br/&gt; moduleId: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="821" y="2579" width="302" height="498" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexThread&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexThread(Long, String): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- targetId: Long&lt;br/&gt;- targetType: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; targetId: Long&lt;br/&gt; targetType: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2079" y="4248" width="266" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexTypeVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexTypeVo(String, String, String, boolean): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- moduleId: String&lt;br/&gt;- typeName: String&lt;br/&gt;- type: String&lt;br/&gt;- activeGlobalSearch: boolean&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; activeGlobalSearch: boolean&lt;br/&gt; type: String&lt;br/&gt; typeName: String&lt;br/&gt; moduleId: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-298" y="3400" width="380" height="257" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexVo(Long, String): &lt;br/&gt;+ FullTextIndexVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- targetType: String&lt;br/&gt;- wordOffsetVoList: List&amp;lt;FullTextIndexWordOffsetVo&amp;gt;&lt;br/&gt;- targetField: String&lt;br/&gt;- fieldContentMap: Map&amp;lt;String, WordVo&amp;gt;&lt;br/&gt;- wordOffsetMap: Map&amp;lt;String, List&amp;lt;FullTextIndexWordOffsetVo&amp;gt;&amp;gt;&lt;br/&gt;- targetId: Long&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ addFieldContentWithHtml(String, WordVo): void&lt;br/&gt;+ hashCode(): int&lt;br/&gt;+ addFieldContent(String, WordVo): void&lt;br/&gt;+ equals(Object): boolean&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; fieldContentMap: Map&amp;lt;String, WordVo&amp;gt;&lt;br/&gt; wordOffsetMap: Map&amp;lt;String, List&amp;lt;FullTextIndexWordOffsetVo&amp;gt;&amp;gt;&lt;br/&gt; fieldList: List&amp;lt;FullTextIndexFieldWordVo&amp;gt;&lt;br/&gt; wordOffsetVoList: List&amp;lt;FullTextIndexWordOffsetVo&amp;gt;&lt;br/&gt; targetId: Long&lt;br/&gt; wordList: List&amp;lt;FullTextIndexWordVo&amp;gt;&lt;br/&gt; targetType: String&lt;br/&gt; targetField: String&lt;br/&gt; contentList: List&amp;lt;FullTextIndexContentVo&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="306" y="2555" width="452" height="546" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-22" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;FullTextIndexWordMapper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getWordByWord(String): FullTextIndexWordVo&lt;br/&gt;+ insertWord(FullTextIndexWordVo): int&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="3485" width="334" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexWordOffsetVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexWordOffsetVo(String, String, int, int): &lt;br/&gt;+ FullTextIndexWordOffsetVo(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- type: String&lt;br/&gt;- start: int&lt;br/&gt;- word: String&lt;br/&gt;- end: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; start: int&lt;br/&gt; type: String&lt;br/&gt; end: int&lt;br/&gt; word: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-271" y="1888" width="366" height="281" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextIndexWordVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextIndexWordVo(): &lt;br/&gt;+ FullTextIndexWordVo(String, String): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- type: String&lt;br/&gt;- id: Long&lt;br/&gt;- word: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ equals(Object): boolean&lt;br/&gt;+ hashCode(): int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: Long&lt;br/&gt; word: String&lt;br/&gt; type: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1793" y="1367" width="278" height="282" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-25" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;FullTextSlicerFactory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ FullTextSlicerFactory(): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- slicerList: List&amp;lt;IFullTextSlicer&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getSlicer(String): IFullTextSlicer&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; slicerList: List&amp;lt;IFullTextSlicer&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="372" y="1439" width="240" height="149" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-26" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;GlobalSearchManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ GlobalSearchManager(WordMapper, DocumentMapper): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ searchDocument(DocumentVo): List&amp;lt;DocumentTypeVo&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1752" y="4584" width="400" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;IFullTextIndexHandler&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ createIndex(Long): void&lt;br/&gt;+ makeupDocument(DocumentVo): void&lt;br/&gt;+ deleteIndex(Long): void&lt;br/&gt;+ rebuildIndex(String, Boolean): void&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type: IFullTextIndexType&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="131" y="3448" width="282" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-28" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;IFullTextIndexType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getTypeName(String): String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; activeGlobalSearch: boolean&lt;br/&gt; type: String&lt;br/&gt; typeName: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1" y="2760" width="223" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-29" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;IFullTextSlicer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ sliceWord(List&amp;lt;FullTextIndexWordOffsetVo&amp;gt;, String): void&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="288" y="684" width="409" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-30" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RebuildAuditVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ RebuildAuditVo(): &lt;br/&gt;+ RebuildAuditVo(String, String): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- editorName: String&lt;br/&gt;- statusText: String&lt;br/&gt;- serverId: Integer&lt;br/&gt;- type: String&lt;br/&gt;- startTime: String&lt;br/&gt;- endTime: String&lt;br/&gt;- editor: String&lt;br/&gt;- status: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type: String&lt;br/&gt; startTime: String&lt;br/&gt; editor: String&lt;br/&gt; statusText: String&lt;br/&gt; serverId: Integer&lt;br/&gt; status: String&lt;br/&gt; editorName: String&lt;br/&gt; endTime: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-268" y="-368" width="240" height="473" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-31" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;WordMapper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ searchWord(List&amp;lt;String&amp;gt;): List&amp;lt;FullTextIndexWordVo&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="677" y="4297" width="390" height="79" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-32" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;WordVo&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ WordVo(String): &lt;br/&gt;+ WordVo(String, String, int, int): &lt;br/&gt;+ WordVo(): &lt;br/&gt;+ WordVo(String, String): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- type: String&lt;br/&gt;- offsetStart: int&lt;br/&gt;- word: String&lt;br/&gt;- id: Long&lt;br/&gt;- offsetEnd: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ equals(Object): boolean&lt;br/&gt;+ hashCode(): int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; offsetStart: int&lt;br/&gt; offsetEnd: int&lt;br/&gt; type: String&lt;br/&gt; id: Long&lt;br/&gt; word: String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2210" y="1295" width="245" height="426" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-33" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-1" target="MZGC72tf3JFac9dOt_uT-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-34" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-33">
+          <mxGeometry x="2161" y="1730" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-35" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-33">
+          <mxGeometry x="2163" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-36" value="offsetList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-33">
+          <mxGeometry x="2172" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-37" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-2" target="MZGC72tf3JFac9dOt_uT-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-38" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-37">
+          <mxGeometry x="-159" y="169" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-39" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-37">
+          <mxGeometry x="-159" y="119" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-40" value="rebuildAudit" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-37">
+          <mxGeometry x="-148" y="119" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-41" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-4" target="MZGC72tf3JFac9dOt_uT-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2052" y="3888" />
+              <mxPoint x="2182" y="3888" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-42" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-41">
+          <mxGeometry x="2041" y="3896" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-43" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-41">
+          <mxGeometry x="2173" y="3202" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-44" value="documentList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-41">
+          <mxGeometry x="2182" y="3202" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-45" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-5" target="MZGC72tf3JFac9dOt_uT-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2272" y="2428" />
+              <mxPoint x="1992" y="2428" />
+              <mxPoint x="1992" y="1688" />
+              <mxPoint x="2002" y="1688" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-46" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-45">
+          <mxGeometry x="2261" y="2434" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-47" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-45">
+          <mxGeometry x="1983" y="1678" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-48" value="fullTextIndexWordList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-45">
+          <mxGeometry x="2002" y="1654" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-49" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-8" target="MZGC72tf3JFac9dOt_uT-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="872" y="1708" />
+              <mxPoint x="873" y="1708" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-50" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-49">
+          <mxGeometry x="861" y="1716" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-51" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-49">
+          <mxGeometry x="864" y="1194" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-52" value="offsetList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-49">
+          <mxGeometry x="873" y="1194" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-53" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.833;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1473" y="4148" />
+              <mxPoint x="1472" y="4148" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-54" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-53">
+          <mxGeometry x="1462" y="4152" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-55" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-53">
+          <mxGeometry x="1461" y="2985" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-56" value="fullTextIndexMapper" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-53">
+          <mxGeometry x="1472" y="2985" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-57" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.833;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1473" y="4148" />
+              <mxPoint x="1472" y="4148" />
+              <mxPoint x="1472" y="3628" />
+              <mxPoint x="1832" y="3628" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-58" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-57">
+          <mxGeometry x="1467" y="4128" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-59" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-57">
+          <mxGeometry x="1707" y="3608" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-60" value="fullTextIndexRebuildAuditMapper" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-57">
+          <mxGeometry x="1832" y="3602" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-61" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1332" y="3928" />
+              <mxPoint x="792" y="3928" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-62" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-61">
+          <mxGeometry x="1037" y="3908" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-63" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1332" y="3928" />
+              <mxPoint x="792" y="3928" />
+              <mxPoint x="792" y="3848" />
+              <mxPoint x="972" y="3848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-64" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-63">
+          <mxGeometry x="857" y="3828" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-65" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1332" y="3928" />
+              <mxPoint x="792" y="3928" />
+              <mxPoint x="792" y="3848" />
+              <mxPoint x="532" y="3848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-66" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-65">
+          <mxGeometry x="742" y="3858" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-67" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.833;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1473" y="4148" />
+              <mxPoint x="1472" y="4148" />
+              <mxPoint x="1472" y="3628" />
+              <mxPoint x="1172" y="3628" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-68" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-67">
+          <mxGeometry x="1422" y="4138" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-69" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-67">
+          <mxGeometry x="1161" y="3577" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-70" value="fullTextIndexWordMapper" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-67">
+          <mxGeometry x="1172" y="3577" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-71" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.167;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-9" target="MZGC72tf3JFac9dOt_uT-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1191" y="3908" />
+              <mxPoint x="343" y="3908" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-72" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-10" target="MZGC72tf3JFac9dOt_uT-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-43" y="3888" />
+              <mxPoint x="-203" y="3888" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-73" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-72">
+          <mxGeometry x="-148" y="3868" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-74" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-10" target="MZGC72tf3JFac9dOt_uT-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="148" y="3888" />
+              <mxPoint x="152" y="3888" />
+              <mxPoint x="152" y="3688" />
+              <mxPoint x="-13" y="3688" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-75" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-74">
+          <mxGeometry x="141" y="3878" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-76" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-74">
+          <mxGeometry x="-22" y="3662" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-77" value="fullTextIndexTypeList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-74">
+          <mxGeometry x="-13" y="3662" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-78" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-10" target="MZGC72tf3JFac9dOt_uT-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="148" y="3888" />
+              <mxPoint x="152" y="3888" />
+              <mxPoint x="152" y="3688" />
+              <mxPoint x="202" y="3688" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-79" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-78">
+          <mxGeometry x="101" y="3878" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-80" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-78">
+          <mxGeometry x="193" y="3618" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-81" value="componentMap" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-78">
+          <mxGeometry x="202" y="3618" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-82" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-10" target="MZGC72tf3JFac9dOt_uT-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="148" y="3888" />
+              <mxPoint x="152" y="3888" />
+              <mxPoint x="152" y="3688" />
+              <mxPoint x="112" y="3688" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-83" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-82">
+          <mxGeometry x="141" y="3845" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-84" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-82">
+          <mxGeometry x="103" y="2901" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-85" value="fullTextIndexTypeMap" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-82">
+          <mxGeometry x="112" y="2901" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-86" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-11" target="MZGC72tf3JFac9dOt_uT-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-87" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-86">
+          <mxGeometry x="121" y="1421" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-88" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-86">
+          <mxGeometry x="121" y="1127" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-89" value="fullTextIndexSchemaMapper" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-86">
+          <mxGeometry x="132" y="1127" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-90" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-18" target="MZGC72tf3JFac9dOt_uT-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="972" y="2368" />
+              <mxPoint x="978" y="2368" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-91" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-90">
+          <mxGeometry x="961" y="2548" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-92" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-90">
+          <mxGeometry x="969" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-93" value="fieldList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-90">
+          <mxGeometry x="978" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-94" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-18" target="MZGC72tf3JFac9dOt_uT-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="972" y="2388" />
+              <mxPoint x="1992" y="2388" />
+              <mxPoint x="1992" y="1688" />
+              <mxPoint x="2002" y="1688" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-95" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-94">
+          <mxGeometry x="961" y="2505" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-96" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-94">
+          <mxGeometry x="1993" y="1654" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-97" value="wordList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-94">
+          <mxGeometry x="2002" y="1678" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-98" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-21" target="MZGC72tf3JFac9dOt_uT-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="2528" />
+              <mxPoint x="652" y="2528" />
+              <mxPoint x="652" y="2348" />
+              <mxPoint x="352" y="2348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-99" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-98">
+          <mxGeometry x="602" y="2398" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-100" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-21" target="MZGC72tf3JFac9dOt_uT-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="2528" />
+              <mxPoint x="652" y="2528" />
+              <mxPoint x="652" y="2348" />
+              <mxPoint x="766" y="2348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-101" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-100">
+          <mxGeometry x="602" y="2428" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-102" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-21" target="MZGC72tf3JFac9dOt_uT-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="2528" />
+              <mxPoint x="652" y="2528" />
+              <mxPoint x="652" y="2348" />
+              <mxPoint x="632" y="2348" />
+              <mxPoint x="632" y="1728" />
+              <mxPoint x="752" y="1728" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-103" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-102">
+          <mxGeometry x="582" y="2183" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-104" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-21" target="MZGC72tf3JFac9dOt_uT-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="419" y="2528" />
+              <mxPoint x="-179" y="2528" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-105" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-104">
+          <mxGeometry x="294" y="2508" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-106" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-104">
+          <mxGeometry x="-188" y="2174" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-107" value="wordOffsetVoList" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-104">
+          <mxGeometry x="-179" y="2174" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-108" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-21" target="MZGC72tf3JFac9dOt_uT-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="2528" />
+              <mxPoint x="652" y="2528" />
+              <mxPoint x="652" y="2348" />
+              <mxPoint x="4" y="2348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-109" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-108">
+          <mxGeometry x="602" y="2458" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-110" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-21" target="MZGC72tf3JFac9dOt_uT-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="2528" />
+              <mxPoint x="652" y="2528" />
+              <mxPoint x="652" y="2348" />
+              <mxPoint x="1863" y="2348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-111" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-110">
+          <mxGeometry x="602" y="2368" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-112" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-25" target="MZGC72tf3JFac9dOt_uT-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-113" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-112">
+          <mxGeometry x="481" y="1407" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-114" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-112">
+          <mxGeometry x="483" y="784" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-115" value="slicerMap" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-112">
+          <mxGeometry x="492" y="784" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-116" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-26" target="MZGC72tf3JFac9dOt_uT-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-117" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-116">
+          <mxGeometry x="2002" y="4348" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-118" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-26" target="MZGC72tf3JFac9dOt_uT-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2052" y="4548" />
+              <mxPoint x="2372" y="4548" />
+              <mxPoint x="2372" y="4228" />
+              <mxPoint x="2362" y="4228" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-119" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-118">
+          <mxGeometry x="2322" y="4431" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-120" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="MZGC72tf3JFac9dOt_uT-26" target="MZGC72tf3JFac9dOt_uT-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1852" y="4548" />
+              <mxPoint x="872" y="4548" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-121" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-120">
+          <mxGeometry x="1749" y="4528" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-122" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-120">
+          <mxGeometry x="861" y="4373" as="geometry" />
+        </mxCell>
+        <mxCell id="MZGC72tf3JFac9dOt_uT-123" value="wordMapper" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="MZGC72tf3JFac9dOt_uT-120">
+          <mxGeometry x="872" y="4373" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
